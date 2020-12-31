@@ -84,7 +84,7 @@ The source code needs some cleaning, and proper comments and credits
 have to be put at the beginning of each file.
 
 The integration and porting of Leonardo Miliani's source code for the LM80C
-to the 8080 CPU and the 8080 Microprocessor Kit SBC has to be finished.  
+to the 8080 CPU and the 8080 Microprocessor Kit SBC has to be finished.
 I first ported Grant Searle's version of NASCOM BASIC 4.7b to the 8080, before
 I came across Leonardo Miliani's LM80C project. Therefore, I added features and 
 source code from the LM80C project only incrementally into my project. As a result
