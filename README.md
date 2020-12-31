@@ -13,16 +13,18 @@ programmable sound generator (PSG) is an AY-3-8910.
 
 The [8080 Microprocessor Kit](http://www.kswichit.com/8080kit/8080kit.htm) 
 shown above is a single board computer developed by [Wichit Sirichote](http://www.kswichit.com/)
-offering a 2.048 MHz clocked 8080 CPU, 32KB EEPROM and 32KB RAM, a 6 digit 7-segment
-display, a hexadecimal keyboard plus 12 function keys, a bit-banged 2400 bps serial interface, 
-and a 100Hz timer generating regular interrupts. The board provides a 40pin extension connector,
+offering a 2.048 MHz clocked 8080 CPU, 32KB EEPROM and 32KB RAM, a 7-segment
+LED display, a hexadecimal keyboard plus 12 function keys, a bit-banged 2400 bps serial interface, 
+and a 100Hz timer generating periodic interrupts. The board provides a 40pin extension connector,
 which is used to connect it to the video and sound extension board on the breadboard.
 The board only comes with a simple monitor program to view and modify the RAM contents
-and the CPU registers using the embedded keys or an attached serial terminal (e.g. a PC).
-I have ordered the plain PCB directly from Wichit Sirichote over email, which went very well.
-Since I already had nearly all components at hand, I did not ordered the full kit. 
-With the help of the excellent manual and instructions, which can be downloaded from 
-8080 Kit web page, it was not difficult to assemble the computer.
+and the CPU registers, to upload user programs into the RAM, to disassemble 8080 program
+code. The monitor program can be operated from the built-in keypad or over an
+attached serial terminal (e.g. a PC). I ordered the plain PCB directly from 
+Wichit Sirichote by email, which went very well. Since I already had nearly all 
+components at hand, I did not order the full kit. With the help of the excellent manual 
+and instructions, which can be downloaded from 8080 Kit web page, it was 
+not difficult to assemble the computer and get it running.
 
 
 Here are screenshots of some BASIC programs taken from the LM80C repository.
@@ -30,7 +32,7 @@ They use the extended set of BASIC commands of the LM80C computer.
 
 Sorting algorithms - [LM80C-R210-sorting-algorithms.bas](https://github.com/leomil72/LM80C/blob/master/BASIC%20examples/LM80C-R210-sorting-algorithms.bas)
 
-In this program execution 200 numbers were sorted; 10% of the numbers are presorted. 
+In this program execution 200 numbers were sorted; 10% of the numbers were presorted. 
 It would be nice to compare the runtimes with the original LM80C Z80 computer. 
 Note, that the 8080 SBC runs at 2.048 MHz and that the 8080 CPU needs more 
 clock periods / machine cycles to perform the instructions than the Z80.
