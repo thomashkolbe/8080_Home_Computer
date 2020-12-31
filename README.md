@@ -26,6 +26,21 @@ components at hand, I did not order the full kit. With the help of the excellent
 and instructions, which can be downloaded from 8080 Kit web page, it was 
 not difficult to assemble the computer and get it running.
 
+![Video &amp; Sound Extension Board](pics/IMG_9024D.jpg)
+
+The video and sound extension board shown above consists of the 
+video display processor (VDP) TMS9918A, a 32KB 62256 SRAM used as dedicated
+graphics memory (only 16KB are used), the programmable sound generator (PSG)
+AY-3-8910, some 74HC chips for address decoding, three 8-bit buffers to interface
+the VDP to the SRAM, and a few discrete components to drive the NTSC composite 
+video output and the (mono) audio output. The PSG chip offers two 8-bit I/O ports,
+which are used to interface to a Commodore C16 keyboard. The C16 keyboard is
+organized as an 8x8 matrix of keys. The schematics for the video and sound
+part (including the keyboard connection) were adapted from the 
+[LM80C homebrew computer project](https://github.com/leomil72/LM80C)
+and all credits go to [Leonardo Miliani](https://www.leonardomiliani.com/en/).
+I have just created a new address decoding logic that fits to the 
+8080 Microprocessor Kit SBC.
 
 Here are screenshots of some BASIC programs taken from the LM80C repository.
 They use the extended set of BASIC commands of the LM80C computer.
