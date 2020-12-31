@@ -3,6 +3,8 @@ Home computer with video &amp; sound using an 8080 or 8085 single board computer
 runs NASCOM BASIC version 4.7 with great extensions created by Grant Searle and Leonardo Miliani,
 which I have ported from the Z80 to the 8080 CPU.
 
+Test
+
 ![Photo of the entire setup](pics/IMG_9049D.jpg)
 
 ## Hardware
