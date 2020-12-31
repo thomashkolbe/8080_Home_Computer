@@ -9,7 +9,7 @@ which I have ported from the Z80 to the 8080 CPU.
 
 The picture above shows the entire hardware setup consisting of the 8080 Microprocessor Kit (the 
 green PCB with the multicoloured keys on the right), the video display and sound generation board (the breadboard
-in the middle), an RS232 connection to a PC (not shown), and a C16 keyboard (shown left) attached to the
+in the middle), an RS232 connection to a PC (not well visible), and a C16 keyboard (shown left) attached to the
 video and sound extension board. The employed video display processor (VDP) is a TMS9918A, the 
 programmable sound generator (PSG) is an AY-3-8910. 
 
@@ -27,7 +27,7 @@ code. The monitor program can be operated from the built-in keypad or over an
 attached serial terminal (e.g. a PC). I ordered the plain PCB directly from 
 Wichit Sirichote by email, which went very well. Since I already had nearly all 
 components at hand, I did not order the full kit. With the help of the excellent manual 
-and instructions, which can be downloaded from 8080 Kit web page, it was 
+and instructions, which can be downloaded from the 8080 Kit web page, it was 
 not difficult to assemble the computer and get it running.
 
 ![Video &amp; Sound Extension Board](pics/IMG_9042D.jpg)
@@ -53,10 +53,10 @@ They use the extended set of BASIC commands of the LM80C computer.
 
 Sorting algorithms - [LM80C-R210-sorting-algorithms.bas](https://github.com/leomil72/LM80C/blob/master/BASIC%20examples/LM80C-R210-sorting-algorithms.bas)
 
-In this program execution 200 numbers were sorted; 10% of the numbers were presorted. 
+During this program execution 200 numbers were sorted; 10% of the numbers were presorted. 
 It would be nice to compare the runtimes with the original LM80C Z80 computer. 
 Note, that the 8080 SBC runs at 2.048 MHz and that the 8080 CPU needs more 
-clock periods / machine cycles to perform the instructions than the Z80.
+clock periods / machine cycles to perform the same instructions than the Z80.
 
 ![Sorting algorithms](pics/IMG_9051D.jpg)
 
@@ -71,3 +71,27 @@ Othello game - [LM80C-R21-othello.bas](https://github.com/leomil72/LM80C/blob/ma
 Mandelbrot graphics computation - [Mandelbrot Multicolor Version 2.bas](https://github.com/leomil72/LM80C/blob/master/BASIC%20examples/mandelbrot.bas)
 
 ![Mandelbrot](pics/IMG_9058D.jpg)
+
+## Next Steps
+
+The entire system needs to be documented, the documents and the 
+source code will be provided in this repository. I started working 
+on drawing the schematics of the video &amp; sound extension board,
+but I haven't used a schematics drawing software like EagleCAD for decades
+and I have not yet worked with the Open Source software KiCAD yet. 
+Hence, it may take a couple of weeks before I can deliver something nice.
+The source code needs some cleaning, and proper comments and credits 
+have to be put at the beginning of each file.
+
+### Further Ideas and Plans
+
+* provide a second 40-pin connector on the video &amp; sound extension board
+  that allows to connect the [8085 MiniMax SBC](http://www.malinov.com/Home/sergeys-projects/minimax8085) 
+  developed by Sergey Kiselev instead of the 8080 Microprocessor Kit SBC. 
+  Since the pin assignments of the 40-pin connectors are different for
+  the two single board computers and the bus interface is slightly
+  different, some glue logic will have to be modified or extended.
+* creation of a PCB for the video &amp; sound extension board
+* mount the 8080 SBC together with the video &amp; sound extension board
+  in the C16 case to create a nice looking system
+  
