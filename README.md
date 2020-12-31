@@ -26,7 +26,7 @@ components at hand, I did not order the full kit. With the help of the excellent
 and instructions, which can be downloaded from 8080 Kit web page, it was 
 not difficult to assemble the computer and get it running.
 
-![Video &amp; Sound Extension Board](pics/IMG_9024D.jpg)
+![Video &amp; Sound Extension Board](pics/IMG_9042D.jpg)
 
 The video and sound extension board shown above consists of the 
 video display processor (VDP) TMS9918A, a 32KB 62256 SRAM used as dedicated
