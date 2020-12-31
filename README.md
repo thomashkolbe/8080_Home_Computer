@@ -85,6 +85,29 @@ have to be put at the beginning of each file.
 
 ### Further Ideas and Plans
 
+* Finish the integration and porting of Leonardo Miliani's source code for the LM80C
+  to the 8080 CPU and the 8080 Microprocessor Kit SBC. Since I first
+  ported Grant Searle's version of NASCOM BASIC 4.7b to the 8080, before
+  I came across Leonardo Miliani's LM80C project, I added features and 
+  source code from the LM80C project only incrementally into my project. As a result
+  the structure of my source code is in parts differing from the LM80C source
+  code. I also had to take into account that in my project I did not have
+  a C16 keyboard in the beginning (I bought one from EBay only recently) and
+  only a bit-banged serial interface, which makes it difficult to deal
+  with the periodic timer interrupts (causing the serial interface to miss
+  the start bit of an incoming byte). When I received the C16 keyboard I also
+  ported the source code parts from the LM80C. It works, and the user can
+  type texts and BASIC commands which are also shown in the video display,
+  but when pressing the Return key nothing happens. If the same commands
+  are entered over the serial interface, they are executed though.
+  
+* Some debugging of the BASIC source code is still required. It took me
+  a week to find a nasty bug in the CMP16 subroutine, which I had to 
+  completely replace from the LM80C implementation, because of missing
+  status flags (here: the overflow flag) and 16-bit arithmetic operations 
+  in the 8080 CPU compared to the Z80. Unfortunately, the DRAW command
+  does not work 100% yet (to be precise: in cases where DX>DY).  
+  
 * Provide a second 40-pin connector on the video &amp; sound extension board
   that allows to connect the [MiniMax8085 SBC](http://www.malinov.com/Home/sergeys-projects/minimax8085) 
   developed by Sergey Kiselev as an alternative to the 8080 Microprocessor Kit SBC. 
@@ -95,9 +118,12 @@ have to be put at the beginning of each file.
   the 8085 MiniMax provides a hardware USART chip (which the 8080 Microprocessor Kit
   doesn't have), but it lacks a timer chip to generate the 100Hz ticks. Probably
   the interrupt output of the TMS9918A can be used to generate 60Hz ticks instead.
+  
 * Creation of a PCB for the video &amp; sound extension board
+
 * Install the 8080 SBC together with the video &amp; sound extension board
   in the C16 case to create a neat looking system
+
 * Integrate BASIC together with the monitor program into the 32KB EPROM.
   Currently, the BASIC is assembled and uploaded into the 32KB RAM using the
   monitor program via the serial interface. The advantage of this approach is that
@@ -107,12 +133,14 @@ have to be put at the beginning of each file.
   been fully debugged (the DRAW command is not working 100% yet), I will
   bring the monitor source code and the BASIC source code into one assembler
   project and burn a new EPROM.
+
 * Modify the BASIC ROM software in such a way that it can work with
   a variety of hardware configurations (with/without external keyboard,
   with/without video display processor, with/without programmable sound generator,
   with/without timer chip). It should be possible to run the BASIC already with
   the vanilla single board computers without any hardware extension. In this case,
   graphic and sound commands would need to be disabled.
+
 * Add an I2C bus controller like the PCF8584 to be able to connect I2C
   devices like displays, sensors, actuators, and EEPROMs (w.g. for program
   storage). Create proper BASIC commands for I2C bus operation.
