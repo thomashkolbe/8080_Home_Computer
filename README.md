@@ -85,13 +85,22 @@ have to be put at the beginning of each file.
 
 ### Further Ideas and Plans
 
-* provide a second 40-pin connector on the video &amp; sound extension board
+* Provide a second 40-pin connector on the video &amp; sound extension board
   that allows to connect the [8085 MiniMax SBC](http://www.malinov.com/Home/sergeys-projects/minimax8085) 
   developed by Sergey Kiselev as an alternative to the 8080 Microprocessor Kit SBC. 
   Since the pin assignments of the 40-pin connectors are different for
   the two single board computers and the bus interface is slightly
-  different, some glue logic will have to be modified or extended.
-* creation of a PCB for the video &amp; sound extension board
-* mount the 8080 SBC together with the video &amp; sound extension board
+  different, some glue logic will have to be modified or extended. Also
+  the 8085 MiniMax provides a hardware USART chip (which the 8080 Microprocessor Kit
+  doesn't have), but it lacks a timer chip to generate the 100Hz ticks. Probably
+  the interrupt output of the TMS9918A can be used to generate 60Hz ticks instead.
+* Creation of a PCB for the video &amp; sound extension board
+* Install the 8080 SBC together with the video &amp; sound extension board
   in the C16 case to create a neat looking system
+* Modify the BASIC ROM software in such a way that it can work with
+  a variety of hardware configurations (with/without external keyboard,
+  with/without video display processor, with/without programmable sound generator)
+* Add an I2C bus controller like the PCF8584 to be able to connect I2C
+  devices like displays, sensors, actuators, and EEPROMs (w.g. for program
+  storage). Create proper BASIC commands for I2C bus operation.
   
