@@ -3,9 +3,7 @@ Home computer with video &amp; sound using an 8080 or 8085 single board computer
 runs NASCOM BASIC version 4.7 with great extensions created by Grant Searle and Leonardo Miliani,
 which I have ported from the Z80 to the 8080 CPU.
 
-Test
-
-![Photo of the entire setup](pics/IMG_9049D.jpg)
+![Photo of the entire setup](pics/8080_Home_Computer.jpg)
 
 ## Hardware
 
@@ -15,7 +13,7 @@ in the middle), an RS232 connection to a PC (not well visible), and a C16 keyboa
 video and sound extension board. The employed video display processor (VDP) is a TMS9918A, the 
 programmable sound generator (PSG) is an AY-3-8910. 
 
-![8080 Microprocessor Kit](pics/IMG_9024D.jpg)
+![8080 Microprocessor Kit](pics/8080_Microprocessor_Kit.jpg)
 
 The [8080 Microprocessor Kit](http://www.kswichit.com/8080kit/8080kit.htm) 
 shown above is a single board computer developed by [Wichit Sirichote](http://www.kswichit.com/)
@@ -32,7 +30,7 @@ components at hand, I did not order the full kit. With the help of the excellent
 and instructions, which can be downloaded from the 8080 Kit web page, it was 
 not difficult to assemble the computer and get it running.
 
-![Video &amp; Sound Extension Board](pics/IMG_9042D.jpg)
+![Video &amp; Sound Extension Board](pics/Video+Sound_Extension_Board.jpg)
 
 The video and sound extension board shown above consists of the 
 video display processor (VDP) TMS9918A, a 32KB 62256 SRAM used as dedicated
