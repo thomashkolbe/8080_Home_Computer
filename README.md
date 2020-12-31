@@ -17,8 +17,8 @@ offering a 2.048 MHz clocked 8080 CPU, 32KB EEPROM and 32KB RAM, a 7-segment
 LED display, a hexadecimal keyboard plus 12 function keys, a bit-banged 2400 bps serial interface, 
 and a 100Hz timer generating periodic interrupts. The board provides a 40pin extension connector,
 which is used to connect it to the video and sound extension board on the breadboard.
-The board only comes with a simple monitor program to view and modify the RAM contents
-and the CPU registers, to upload user programs into the RAM, to disassemble 8080 program
+The board comes with a simple monitor program to view and modify the RAM contents
+and the CPU registers, to upload user programs into the RAM, and to disassemble 8080 program
 code. The monitor program can be operated from the built-in keypad or over an
 attached serial terminal (e.g. a PC). I ordered the plain PCB directly from 
 Wichit Sirichote by email, which went very well. Since I already had nearly all 
