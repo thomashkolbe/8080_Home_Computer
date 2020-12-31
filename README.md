@@ -101,7 +101,9 @@ have to be put at the beginning of each file.
 * Modify the BASIC ROM software in such a way that it can work with
   a variety of hardware configurations (with/without external keyboard,
   with/without video display processor, with/without programmable sound generator,
-  with/without timer chip)
+  with/without timer chip). It should be possible to run the BASIC already with
+  the vanilla single board computers without any hardware extension. In this case,
+  graphic and sound commands would need to be disabled.
 * Add an I2C bus controller like the PCF8584 to be able to connect I2C
   devices like displays, sensors, actuators, and EEPROMs (w.g. for program
   storage). Create proper BASIC commands for I2C bus operation.
