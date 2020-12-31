@@ -5,6 +5,8 @@ which I have ported from the Z80 to the 8080 CPU.
 
 ![Photo of the entire setup](pics/IMG_9049D.jpg)
 
+## Hardware
+
 The picture above shows the entire hardware setup consisting of the 8080 Microprocessor Kit (the 
 green PCB with the multicoloured keys on the right), the video display and sound generation board (the breadboard
 in the middle), an RS232 connection to a PC (not shown), and a C16 keyboard (shown left) attached to the
@@ -43,6 +45,8 @@ part (including the keyboard connection) were adapted from the
 and all credits go to [Leonardo Miliani](https://www.leonardomiliani.com/en/).
 I have just created a new address decoding logic that fits to the 
 8080 Microprocessor Kit SBC.
+
+## Software
 
 Here are screenshots of some BASIC programs taken from the [LM80C repository](https://github.com/leomil72/LM80C).
 They use the extended set of BASIC commands of the LM80C computer.
