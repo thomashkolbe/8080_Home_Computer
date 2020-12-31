@@ -95,11 +95,12 @@ have to be put at the beginning of each file.
   a C16 keyboard in the beginning (I bought one from EBay only recently) and
   only a bit-banged serial interface, which makes it difficult to deal
   with the periodic timer interrupts (causing the serial interface to miss
-  the start bit of an incoming byte). When I received the C16 keyboard I also
-  ported the source code parts from the LM80C. It works, and the user can
-  type texts and BASIC commands which are also shown in the video display,
+  the start bit of an incoming byte). After I received the C16 keyboard I 
+  ported the respective source code parts from the LM80C. It works, and the user can
+  type texts and BASIC commands which are shown in the video display,
   but when pressing the Return key nothing happens. If the same commands
-  are entered over the serial interface, they are executed though.
+  are entered over the serial interface (and they are also shown in the
+  video display), they are executed, though.
   
 * Some debugging of the BASIC source code is still required. It took me
   a week to find a nasty bug in the CMP16 subroutine, which I had to 
