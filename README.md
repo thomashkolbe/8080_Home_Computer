@@ -24,4 +24,4 @@ Othello game - LM80C-R21-othello.bas
 
 Mandelbrot graphics computation - Mandelbrot Color 2.bas
 
-![Mandelbrot](pics/IMG_9055D.jpg)
+![Mandelbrot](pics/IMG_9058D.jpg)
