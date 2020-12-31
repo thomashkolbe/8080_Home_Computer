@@ -86,10 +86,11 @@ have to be put at the beginning of each file.
 ### Further Ideas and Plans
 
 * Provide a second 40-pin connector on the video &amp; sound extension board
-  that allows to connect the [8085 MiniMax SBC](http://www.malinov.com/Home/sergeys-projects/minimax8085) 
+  that allows to connect the [MiniMax8085 SBC](http://www.malinov.com/Home/sergeys-projects/minimax8085) 
   developed by Sergey Kiselev as an alternative to the 8080 Microprocessor Kit SBC. 
-  Since the pin assignments of the 40-pin connectors are different for
-  the two single board computers and the bus interface is slightly
+  The MiniMax8085 also provides 32KB (E)EPROM and 32KB RAM and offers
+  a 40-pin extension connector. Since the pin assignments of the 40-pin connectors 
+  are different for the two single board computers and the bus interface is slightly
   different, some glue logic will have to be modified or extended. Also
   the 8085 MiniMax provides a hardware USART chip (which the 8080 Microprocessor Kit
   doesn't have), but it lacks a timer chip to generate the 100Hz ticks. Probably
