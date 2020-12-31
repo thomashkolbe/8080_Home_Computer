@@ -48,7 +48,18 @@ I have just created a new address decoding logic that fits to the
 
 ## Software
 
-Here are screenshots of some BASIC programs taken from the [LM80C repository](https://github.com/leomil72/LM80C).
+![Boot splash graphics](pics/IMG_9044D.jpg)
+
+A BASIC program that shows colour bars for all 15 colors 
+supported by the TMS9918A VDP.
+
+![Colour bars](pics/IMG_9046.jpg)
+
+Here is the program output:
+
+![Colour bars](pics/IMG_9047.jpg)
+
+The following photos show screenshots of some BASIC programs taken from the [LM80C repository](https://github.com/leomil72/LM80C).
 They use the extended set of BASIC commands of the LM80C computer.
 
 Sorting algorithms - [LM80C-R210-sorting-algorithms.bas](https://github.com/leomil72/LM80C/blob/master/BASIC%20examples/LM80C-R210-sorting-algorithms.bas)
