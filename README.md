@@ -1,5 +1,7 @@
 # 8080_Home_Computer
-Home computer with video &amp; sound using an 8080 or 8085 single board computer
+Home computer with video &amp; sound using an 8080 or 8085 single board computer. The computer
+runs NASCOM BASIC version 4.7 with great extensions created by Grant Searle and Leonardo Miliani,
+which I have ported from the Z80 to the 8080 CPU.
 
 ![Photo of the entire setup](pics/IMG_9049D.jpg)
 
@@ -42,7 +44,7 @@ and all credits go to [Leonardo Miliani](https://www.leonardomiliani.com/en/).
 I have just created a new address decoding logic that fits to the 
 8080 Microprocessor Kit SBC.
 
-Here are screenshots of some BASIC programs taken from the LM80C repository.
+Here are screenshots of some BASIC programs taken from the [LM80C repository](https://github.com/leomil72/LM80C).
 They use the extended set of BASIC commands of the LM80C computer.
 
 Sorting algorithms - [LM80C-R210-sorting-algorithms.bas](https://github.com/leomil72/LM80C/blob/master/BASIC%20examples/LM80C-R210-sorting-algorithms.bas)
