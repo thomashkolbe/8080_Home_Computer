@@ -77,8 +77,8 @@ Mandelbrot graphics computation - [Mandelbrot Multicolor Version 2.bas](https://
 The entire system needs to be documented, the documents and the 
 source code will be provided in this repository. I started working 
 on drawing the schematics of the video &amp; sound extension board,
-but I haven't used a schematics drawing software like EagleCAD for decades
-and I have not yet worked with the Open Source software KiCAD yet. 
+but I haven't used a schematics drawing software like [EAGLE](https://www.autodesk.com/products/eagle/overview) 
+for decades and I have not yet worked with the Open Source software [KiCad](https://kicad.org/) yet. 
 Hence, it may take a couple of weeks before I can deliver something nice.
 The source code needs some cleaning, and proper comments and credits 
 have to be put at the beginning of each file.
@@ -87,11 +87,11 @@ have to be put at the beginning of each file.
 
 * provide a second 40-pin connector on the video &amp; sound extension board
   that allows to connect the [8085 MiniMax SBC](http://www.malinov.com/Home/sergeys-projects/minimax8085) 
-  developed by Sergey Kiselev instead of the 8080 Microprocessor Kit SBC. 
+  developed by Sergey Kiselev as an alternative to the 8080 Microprocessor Kit SBC. 
   Since the pin assignments of the 40-pin connectors are different for
   the two single board computers and the bus interface is slightly
   different, some glue logic will have to be modified or extended.
 * creation of a PCB for the video &amp; sound extension board
 * mount the 8080 SBC together with the video &amp; sound extension board
-  in the C16 case to create a nice looking system
+  in the C16 case to create a neat looking system
   
