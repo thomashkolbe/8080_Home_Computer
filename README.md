@@ -74,7 +74,7 @@ Mandelbrot graphics computation - [Mandelbrot Multicolor Version 2.bas](https://
 
 ## Next Steps
 
-The entire system needs to be documented, the documents and the 
+The entire system needs to be documented. The documents and the 
 source code will be provided in this repository. I started working 
 on drawing the schematics of the video &amp; sound extension board,
 but I haven't used a schematics drawing software like [EAGLE](https://www.autodesk.com/products/eagle/overview) 
@@ -88,7 +88,7 @@ have to be put at the beginning of each file.
 * Provide a second 40-pin connector on the video &amp; sound extension board
   that allows to connect the [MiniMax8085 SBC](http://www.malinov.com/Home/sergeys-projects/minimax8085) 
   developed by Sergey Kiselev as an alternative to the 8080 Microprocessor Kit SBC. 
-  The MiniMax8085 also provides 32KB (E)EPROM and 32KB RAM and offers
+  The MiniMax8085 also provides 32KB (E)EPROM and 32KB RAM and 
   a 40-pin extension connector. Since the pin assignments of the 40-pin connectors 
   are different for the two single board computers and the bus interface is slightly
   different, some glue logic will have to be modified or extended. Furthermore,
@@ -98,6 +98,15 @@ have to be put at the beginning of each file.
 * Creation of a PCB for the video &amp; sound extension board
 * Install the 8080 SBC together with the video &amp; sound extension board
   in the C16 case to create a neat looking system
+* Integrate BASIC together with the monitor program into the 32KB EPROM.
+  Currently, the BASIC is assembled and uploaded into the 32KB RAM using the
+  monitor program via the serial interface. The advantage of this approach is that
+  after making changes to the BASIC source code the assembled file can directly
+  be uploaded to the system without burning another EPROM. The disadvantage is
+  that only 11 KB of RAM remain free for BASIC programs. Once the BASIC has
+  been fully debugged (the DRAW command is not working 100% yet), I will
+  bring the monitor source code and the BASIC source code into one assembler
+  project and burn a new EPROM.
 * Modify the BASIC ROM software in such a way that it can work with
   a variety of hardware configurations (with/without external keyboard,
   with/without video display processor, with/without programmable sound generator,
