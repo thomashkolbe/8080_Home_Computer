@@ -53,8 +53,9 @@ I have just created a new address decoding logic that fits to the
 ## Software
 
 The 8080 Home Computer runs NASCOM BASIC 4.7 with great extensions created by 
-Grant Searle for his Z80 SBC designs and Leonardo Miliani for his homebrew Z80 
-computer LM80C. Since my computer employs an (older) 8080 CPU instead of the 
+[Grant Searle for his Z80 SBC designs](http://searle.wales/) and Leonardo 
+Miliani for his [homebrew Z80 computer LM80C](https://github.com/leomil72/LM80C). 
+Since my computer employs an (older) 8080 CPU instead of the 
 (newer) Z80 CPU, the Z80 source code had to be ported (or call it downgraded!) 
 to the 8080 CPU. The Z80 is backwards compatible with the 8080, 
 which means that the 8080 instruction set and the register set 
@@ -72,8 +73,8 @@ especially when Z80 specific instructions and register uses were encountered,
 you would have to manually create a workaround anyway. 
 (As far as I know there is no automatic tool doing this.)
 
-I first ported Grant Searle's version of NASCOM BASIC 4.7b to the 8080 CPU 
-(and changed the I/O routines to work with the 8080 Microprocessor Kit), 
+I first ported [Grant Searle's version of NASCOM BASIC 4.7b](http://searle.x10host.com/z80/SimpleZ80.html#RomFiles) 
+to the 8080 CPU (and changed the I/O routines to work with the 8080 Microprocessor Kit), 
 before I came across Leonardo Miliani's LM80C project and then have incrementally
 ported most of the LM80C software parts to the 8080 CPU, too. The software 
 adapted from the LM80C project especially added the VDP and PSG driver 
@@ -85,8 +86,33 @@ why the computer shows the LM80C logo at boot time (see image below).
  
 ![Boot splash graphics](pics/8080_Computer_Booting_LM80C_BASIC.jpg)
 
-A BASIC program that shows colour bars for all 15 colors 
-supported by the TMS9918A VDP.
+Once booted the computer asks for entering the top memory address. 
+If all available memory should be used for BASIC, only Return 
+has to be pressed. Then the user can type in or load a 
+BASIC program or can execute BASIC commands in direct mode,
+i.e. directly from the command line. Loading of BASIC programs
+has to be done via the serial interface using a proper 
+terminal program on the connected PC. I found that the 
+Open Source terminal program [Tera Term](https://ttssh2.osdn.jp/) 
+is working very well for this. When configuring the serial 
+interface choose the proper COM port, 2400 bps, 8N1, no
+hardware handshake and a character transmit delay of 80ms
+and a line transmit delay of 500ms. The delays are important,
+because the 8080 Microprocessor Kit used as the mainboard
+does not have a serial interface chip (UART) and we cannot
+use the hardware handshake protocol for the serial interface.
+Instead, we have to give the computer enough time to process
+each received character and newline and to make sure that
+it is busy waiting for the next character on the serial
+line before it is actually being sent. In order to load a BASIC
+program simply load it in an editor application on the connected PC 
+select all text and copy it into the clipboard buffer (CTRL-C)
+and then bring the terminal window to the front and paste
+the text into it (CTRL-V). For longer programs this can take 
+a while. 
+
+The following screenshot shows a short BASIC program that
+displays colour bars for all 15 colors supported by the TMS9918A VDP.
 
 ![Colour bars](pics/BASIC_Listing_Colour_Bars.jpg)
 
