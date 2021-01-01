@@ -1,7 +1,8 @@
 # 8080_Home_Computer
 Home computer with video &amp; sound using an 8080 or 8085 single board computer. The computer
 runs NASCOM BASIC version 4.7 with great extensions created by Grant Searle and Leonardo Miliani,
-which I have ported from the Z80 to the 8080 CPU.
+which I have ported from the Z80 to the 8080 CPU. This is a hobby project I created 
+to relax a bit from work.
 
 ![Photo of the entire setup](pics/8080_Home_Computer.jpg)
 
@@ -86,12 +87,12 @@ why the computer shows the LM80C logo at boot time (see image below).
  
 ![Boot splash graphics](pics/8080_Computer_Booting_LM80C_BASIC.jpg)
 
-Once booted the computer asks for entering the top memory address. 
+Once booted, the computer asks for entering the top memory address. 
 If all available memory should be used for BASIC, only Return 
 has to be pressed. Then the user can type in or load a 
 BASIC program or can execute BASIC commands in direct mode,
 i.e. directly from the command line. Loading of BASIC programs
-has to be done via the serial interface using a proper 
+has to be done via the serial interface using a suitable 
 terminal program on the connected PC. I found that the 
 Open Source terminal program [Tera Term](https://ttssh2.osdn.jp/) 
 is working very well for this. When configuring the serial 
@@ -105,8 +106,8 @@ Instead, we have to give the computer enough time to process
 each received character and newline and to make sure that
 it is busy waiting for the next character on the serial
 line before it is actually being sent. In order to load a BASIC
-program simply load it in an editor application on the connected PC 
-select all text and copy it into the clipboard buffer (CTRL-C)
+program simply load it in an editor application on the connected PC, 
+select all text and copy it into the clipboard buffer (CTRL-C),
 and then bring the terminal window to the front and paste
 the text into it (CTRL-V). For longer programs this can take 
 a while. 
