@@ -52,6 +52,37 @@ I have just created a new address decoding logic that fits to the
 
 ## Software
 
+The 8080 Home Computer runs NASCOM BASIC 4.7 with great extensions created by 
+Grant Searle for his Z80 SBC designs and Leonardo Miliani for his homebrew Z80 
+computer LM80C. Since my computer employs an (older) 8080 CPU instead of the 
+(newer) Z80 CPU, the Z80 source code had to be ported (or call it downgraded!) 
+to the 8080 CPU. The Z80 is backwards compatible with the 8080, 
+which means that the 8080 instruction set and the register set 
+is a subset of those provided by the Z80. Therefore, a good share 
+of Z80 code could be adapted immediately for running on an 8080 or 8085 
+(the 8085 is compatible with the 8080, and only has two new instructions). 
+However, the Z80 has additional registers, status flags, 
+and instructions (with new addressing modes, too) compared to the 8080/8085 
+and code that was using these had to be rewritten using the more 
+limited 8080 instructions, status flags, and registers. 
+I chose a manual approach for porting the software, i.e. I went through 
+all the source code and replaced all instruction mnemonics and 
+operands. This took quite some time, but I learned a lot from this, and 
+especially when Z80 specific instructions and register uses were encountered, 
+you would have to manually create a workaround anyway. 
+(As far as I know there is no automatic tool doing this.)
+
+I first ported Grant Searle's version of NASCOM BASIC 4.7b to the 8080 CPU 
+(and changed the I/O routines to work with the 8080 Microprocessor Kit), 
+before I came across Leonardo Miliani's LM80C project and then have incrementally
+ported most of the LM80C software parts to the 8080 CPU, too. The software 
+adapted from the LM80C project especially added the VDP and PSG driver 
+routines, the new graphics and sound BASIC commands, the timer interrupt 
+service routine, and the handling of the C16 keyboard. The fonts were
+adopted from the LM80C project without change. I have also adapted 
+most parts of the hardware initialization routines, which is the reason 
+why the computer shows the LM80C logo at boot time (see image below).
+ 
 ![Boot splash graphics](pics/8080_Computer_Booting_LM80C_BASIC.jpg)
 
 A BASIC program that shows colour bars for all 15 colors 
