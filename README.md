@@ -48,16 +48,16 @@ I have just created a new address decoding logic that fits to the
 
 ## Software
 
-![Boot splash graphics](pics/IMG_9044D.jpg)
+![Boot splash graphics](pics/8080_Computer_Booting_LM80C_BASIC.jpg)
 
 A BASIC program that shows colour bars for all 15 colors 
 supported by the TMS9918A VDP.
 
-![Colour bars](pics/IMG_9046.jpg)
+![Colour bars](pics/BASIC_Listing_Colour_Bars.jpg)
 
 Here is the program output:
 
-![Colour bars](pics/IMG_9047.jpg)
+![Colour bars](pics/BASIC_Colour_Bars.jpg)
 
 The following photos show screenshots of some BASIC programs taken from the [LM80C repository](https://github.com/leomil72/LM80C).
 They use the extended set of BASIC commands of the LM80C computer.
@@ -69,19 +69,19 @@ It would be nice to compare the runtimes with the original LM80C Z80 computer.
 Note, that the 8080 SBC runs at 2.048 MHz and that the 8080 CPU needs more 
 clock periods / machine cycles to perform the same instructions than the Z80.
 
-![Sorting algorithms](pics/IMG_9051D.jpg)
+![Sorting algorithms](pics/BASIC_Sorting_Algorithms_1.jpg)
 
 Same demo program as before, but now only 20 numbers were sorted and 0% were ordered before.
 
-![Sorting algorithms](pics/IMG_9051D.jpg)
+![Sorting algorithms](pics/BASIC_Sorting_Algorithms_2.jpg)
 
 Othello game - [LM80C-R21-othello.bas](https://github.com/leomil72/LM80C/blob/master/BASIC%20examples/LM80C-R21-othello.bas)
 
-![Othello Game](pics/IMG_9055D.jpg)
+![Othello Game](pics/BASIC_Othello.jpg)
 
 Mandelbrot graphics computation - [Mandelbrot Multicolor Version 2.bas](https://github.com/leomil72/LM80C/blob/master/BASIC%20examples/mandelbrot.bas)
 
-![Mandelbrot](pics/IMG_9058D.jpg)
+![Mandelbrot](pics/BASIC_Mandelbrot.jpg)
 
 ## Next Steps
 
