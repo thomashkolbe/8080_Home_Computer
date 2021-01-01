@@ -84,6 +84,8 @@ service routine, and the handling of the C16 keyboard. The fonts were
 adopted from the LM80C project without change. I have also adapted 
 most parts of the hardware initialization routines, which is the reason 
 why the computer shows the LM80C logo at boot time (see image below).
+All credits for the implemented BASIC go to Microsoft (NASCOM BASIC
+was developed by them), Leonardo Miliani, and Grant Searle.
  
 ![Boot splash graphics](pics/8080_Computer_Booting_LM80C_BASIC.jpg)
 
