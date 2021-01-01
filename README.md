@@ -159,6 +159,6 @@ news is that all other BASIC commands adapted from the LM80C
   graphic and sound commands would need to be disabled.
 
 * Add an I2C bus controller like the PCF8584 to be able to connect I2C
-  devices like displays, sensors, actuators, and EEPROMs (w.g. for program
+  devices like displays, sensors, actuators, and EEPROMs (e.g. for program
   storage). Create proper BASIC commands for I2C bus operation.
   
