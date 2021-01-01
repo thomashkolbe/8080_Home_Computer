@@ -32,8 +32,8 @@ Wichit Sirichote by email, which went very well. Since I already had nearly all
 components at hand, I did not order the full kit. With the help of the excellent manual 
 and instructions, which can be downloaded from the 8080 Kit web page, it was 
 not difficult to assemble the computer and get it running. BTW, the date code 
-on the CPU shows "814", which means it was produced in the 14th week of 1978
-- more than 42 years ago, and it is still working! 
+on the CPU shows "814", which means it was produced in the 14th week of 1978 - more 
+than 42 years ago, and it is still working! 
 
 ### Video &amp; Sound Extension Board with Keyboard Interface
 
