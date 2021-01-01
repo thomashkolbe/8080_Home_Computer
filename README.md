@@ -39,7 +39,7 @@ not difficult to assemble the computer and get it running.
 The video and sound extension board shown above consists of the 
 video display processor (VDP) TMS9918A, a 32KB 62256 SRAM used as dedicated
 graphics memory (only 16KB are used), the programmable sound generator (PSG)
-AY-3-8910, some 74HC chips for address decoding, three 8-bit buffers to interface
+AY-3-8910, some 74HC(T) chips for address decoding, three 8-bit buffers to interface
 the VDP to the SRAM, and a few discrete components to drive the NTSC composite 
 video output and the (mono) audio output. The PSG chip offers two 8-bit I/O ports,
 which are used to interface to a Commodore C16 keyboard. The C16 keyboard is
@@ -120,7 +120,9 @@ a week to find a nasty bug in the CMP16 subroutine, which I had to
 completely replace from the LM80C implementation, because of missing
 status flags (here: the overflow flag) and 16-bit arithmetic operations 
 in the 8080 CPU compared to the Z80. Unfortunately, the DRAW command
-does not work 100% yet (to be precise: in cases where DX>DY).  
+does not work 100% yet (to be precise: in cases where DX>DY). The good 
+news is that all other BASIC commands adapted from the LM80C
+(including the other graphics commands) work well.
 
 ### Further Ideas and Plans
   
