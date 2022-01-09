@@ -9,10 +9,10 @@ to relax a bit from work.
 ## Hardware
 
 The picture above shows the entire hardware setup consisting of the 8080 Microprocessor Kit (the 
-green PCB with the multicoloured keys on the right), the video display and sound generation board (the breadboard
-in the middle), an RS232 connection to a PC (not well visible), and a C16 keyboard (shown left) attached to the
-video and sound extension board. The employed video display processor (VDP) is a TMS9918A, the 
-programmable sound generator (PSG) is an AY-3-8910. 
+green PCB with the multicoloured keys on the right), the video display and sound generation board 
+(the breadboard in the middle), an RS232 connection to a PC (not well visible), and 
+a C16 keyboard (shown left) attached to the video and sound extension board. The employed 
+video display processor (VDP) is a TMS9918A, the programmable sound generator (PSG) is an AY-3-8910. 
 
 ### Mainboard
 
@@ -51,7 +51,12 @@ part (including the keyboard connection) were adapted from the
 [LM80C homebrew computer project](https://github.com/leomil72/LM80C)
 and all credits go to [Leonardo Miliani](https://www.leonardomiliani.com/en/).
 I have just created a new address decoding logic that fits to the 
-8080 Microprocessor Kit SBC.
+8080 Microprocessor Kit SBC. 
+
+The schematics can be found in the [hardware](hardware/) folder. They were created using 
+[KiCad 5.1.8](https://kicad.org/). I have modified or added some components 
+like the PSG AY-3-8910 and they are included in the file 
+`Video+Sound_Board_for_8080_Microprocessor_Kit-cache.lib`.
 
 ## Software
 
@@ -151,15 +156,6 @@ Mandelbrot graphics computation - [Mandelbrot Multicolor Version 2.bas](https://
 
 ## Next Steps
 
-The entire system needs to be documented. The documents and the 
-source code will be provided in this repository. I started working 
-on drawing the schematics of the video &amp; sound extension board,
-but I haven't used a schematics drawing software like [EAGLE](https://www.autodesk.com/products/eagle/overview) 
-for decades and I have not yet worked with the Open Source software [KiCad](https://kicad.org/) yet. 
-Hence, it may take a couple of weeks before I can deliver something nice.
-The source code needs some cleaning, and proper comments and credits 
-have to be put at the beginning of each file.
-
 The integration and porting of Leonardo Miliani's source code for the LM80C
 to the 8080 CPU and the 8080 Microprocessor Kit SBC has to be finished.
 I first ported Grant Searle's version of NASCOM BASIC 4.7b to the 8080, before
@@ -177,14 +173,10 @@ but when pressing the Return key nothing happens. If the same commands
 are entered over the serial interface (and they are also shown in the
 video display), they are executed, though.
 
-Some debugging of the BASIC source code is still required. It took me
-a week to find a nasty bug in the CMP16 subroutine, which I had to 
-completely replace from the LM80C implementation, because of missing
-status flags (here: the overflow flag) and 16-bit arithmetic operations 
-in the 8080 CPU compared to the Z80. Unfortunately, the DRAW command
-does not work 100% yet (to be precise: in cases where DX>DY). The good 
-news is that all other BASIC commands adapted from the LM80C
-(including the other graphics commands) work well.
+Before I can upload the source code it needs some cleaning, and proper 
+comments and credits have to be put at the beginning of each file. 
+Also, I am currently designing and implementing my own splash logo 
+shown during system boot.
 
 ### Further Ideas and Plans
   
@@ -223,4 +215,7 @@ news is that all other BASIC commands adapted from the LM80C
 * Add an I2C bus controller like the PCF8584 to be able to connect I2C
   devices like displays, sensors, actuators, and EEPROMs (e.g. for program
   storage). Create proper BASIC commands for I2C bus operation.
+  
+* Add a serial communication chip like the 8251 USART or 68B50 ACIA
+  to avoid the problems with the bit-banged serial communication
   
