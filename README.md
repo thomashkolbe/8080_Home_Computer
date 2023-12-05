@@ -190,7 +190,7 @@ shown during system boot.
   BASIC source code into one assembler project and burn a new EPROM.
 
 * Provide a second 40-pin connector on the video &amp; sound extension board
-  that allows to connect the [MiniMax8085 SBC](http://www.malinov.com/Home/sergeys-projects/minimax8085) 
+  that allows to connect the [MiniMax8085 SBC](https://github.com/skiselev/minimax8085) 
   developed by Sergey Kiselev as an alternative to the 8080 Microprocessor Kit SBC. 
   The MiniMax8085 also provides 32KB (E)EPROM and 32KB RAM and 
   a 40-pin extension connector. Since the pin assignments of the 40-pin connectors 
