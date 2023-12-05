@@ -49,7 +49,7 @@ which are used to interface to a Commodore C16 keyboard. The C16 keyboard is
 organized as an 8x8 matrix of keys. The schematics for the video and sound
 part (including the keyboard connection) were adapted from the 
 [LM80C homebrew computer project](https://github.com/leomil72/LM80C)
-and all credits go to [Leonardo Miliani](https://www.leonardomiliani.com/en/).
+and all credits go to [Leonardo Miliani](https://www.leonardomiliani.com/?lang=en).
 I have just created a new address decoding logic that fits to the 
 8080 Microprocessor Kit SBC. 
 
