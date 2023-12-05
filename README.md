@@ -19,7 +19,7 @@ video display processor (VDP) is a TMS9918A, the programmable sound generator (P
 ![8080 Microprocessor Kit](pics/8080_Microprocessor_Kit.jpg)
 
 The [8080 Microprocessor Kit](http://www.kswichit.com/8080kit/8080kit.htm) 
-shown above is a single board computer developed by [Wichit Sirichote](http://www.kswichit.com/)
+shown above is a single board computer developed by [Wichit Sirichote](http://www.kswichit.net/)
 offering a 2.048 MHz clocked 8080 CPU, 32KB EPROM and 32KB RAM, a 7-segment
 LED display, a hexadecimal keyboard plus 12 function keys, a bit-banged 2400 bps serial interface, 
 and a 100Hz timer generating periodic interrupts. The board provides a 40pin extension connector,
@@ -33,7 +33,7 @@ components at hand, I did not order the full kit. With the help of the excellent
 and instructions, which can be downloaded from the 8080 Kit web page, it was 
 not difficult to assemble the computer and get it running. BTW, the date code 
 on the CPU shows "814", which means it was produced in the 14th week of 1978 - more 
-than 42 years ago, and it is still working! 
+than 45 years ago, and it is still working! 
 
 ### Video &amp; Sound Extension Board with Keyboard Interface
 
